@@ -1,48 +1,13 @@
 <h1>
-			More often that you'd wish
-		</h1>
-		<div>
-			<h2>
-				Sometimes you just have to wake up incredibly early on a Sunday.
-			</h2>
-			<p>
-				28th March 2015
-			</p>
-		</div>
-			<div>
-			<h2>
-				Sometimes there's no place to park your bike.
-			</h2>
-			<p>
-				Fuck Bicing.
-			</p>
-		</div>
-		<div>
-			<h2>
-				Other times the sushi restaurant you wanted to go to is full.
-			</h2>
-			<p>
-				UUUGH
-			</p>
-		</div>
-		<div>
-			<h2>
-				But, thankfully, sometimes things just go smoothly.
-			</h2>
-			<p>
-				YAY
-			</p>
-		</div>
-		<%
-			@website = [
-				["http://tryruby.org/levels/4/challenges/3", "Try Ruby"],
-				["http://wuaki.tv", "Where I spend 80% of my life"],
-				["http://twitter.com/sara_doe", "Where I tell my life to strangers"],
-				["http://instagram.com/sara_doe", "Where I SPAM everyone with pics of my cat"]
-			]
-		%>
+	More often that you'd wish
+</h1>
+		<% for entry in @entries %>
+        <b><%=entry.title%></b>
+        <p><i><%=entry.date%></i></p>
+        <p><%=entry.contents%></p>
+    <% end %>
 		<% for url, name in @website %>
-		<li> <a href=<%= url %>> <%= name %></a> </li>
+		    <li> <a href=<%= url %>> <%= name %></a> </li>
 		<% end %>
 
 		<img src="https://scontent-mad.xx.fbcdn.net/hphotos-xfp1/v/t1.0-9/10801644_10204568644551846_4155399223848972380_n.jpg?oh=15ef58c36d11d8a32c6a476324e10609&oe=55A7B70D" style="width:200px" />
