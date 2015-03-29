@@ -1,0 +1,5 @@
+<b><%= link_to(entry.title, entry_path(entry)) %></b>
+<p><i><%= entry.date %></i></p>
+<p><%= entry.contents %></p>
+<p><%= button_to("delete", entry, method: :delete) %></p>
+<p><%= link_to("update", edit_entry_path(entry)) %></p>

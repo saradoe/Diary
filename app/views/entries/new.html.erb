@@ -1,0 +1,16 @@
+<%= form_for(@entry) do |form| %>
+
+	<div class="field">
+		<p><%= form.label("title") %></p>
+		<p><%= form.text_field("title") %></p>
+	</div>
+
+	<p><%= form.label("contents") %></p>
+	<p><%= form.text_area("contents") %></p>
+
+	<p><%= form.label("date") %></p>
+	<p><%= form.date_field("date") %></p>
+
+	<p><%= form.submit("You're done!") %></p>
+
+<% end %>

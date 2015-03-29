@@ -1,6 +1,6 @@
 class WelcomeController < ApplicationController
   def index
-    @entries = Entry.all
+    @entries = Entry.all.order(updated_at: "desc")
 		@website = [
 			["http://tryruby.org/levels/4/challenges/3", "Try Ruby"],
 			["http://wuaki.tv", "Where I spend 80% of my life"],
